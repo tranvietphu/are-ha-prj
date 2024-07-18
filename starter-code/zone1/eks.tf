@@ -22,7 +22,7 @@ provider "kubernetes" {
    vpc_id             = module.vpc.vpc_id
    nodes_desired_size = 2
    nodes_max_size     = 2
-   nodes_min_size     = 2
+   nodes_min_size     = 1
 
    depends_on = [
     module.vpc,
