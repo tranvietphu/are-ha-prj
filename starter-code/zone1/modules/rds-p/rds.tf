@@ -49,6 +49,11 @@ resource "aws_rds_cluster" "udacity_cluster" {
   storage_encrypted        = false
   backup_retention_period  = 5
   depends_on = [aws_rds_cluster_parameter_group.cluster_pg]
+  lifecycle {
+    ignore_changes = [
+      availability_zones,
+    ]
+  }  
 }
 
 output "db_cluster_arn" {
