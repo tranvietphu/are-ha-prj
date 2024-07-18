@@ -2,6 +2,8 @@
 
 ## AWS Zones
 Identify your zones here
+Zone1: US-EAST-2
+Zone2: US-WAEST-2
 
 ## Servers and Clusters
 
@@ -9,6 +11,8 @@ Identify your zones here
 | Asset      | Purpose           | Size                                                                   | Qty                                                             | DR                                                                                                           |
 |------------|-------------------|------------------------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | Asset name | Brief description | AWS size eg. t3.micro (if applicable, not all assets will have a size) | Number of nodes/replicas or just how many of a particular asset | Identify if this asset is deployed to DR, replicated, created in multiple locations or just stored elsewhere |
+| VPC | Virtual network | /16 | 2 | 2 zone(region), 1 VPC each region |
+| EC2 | App/web server | t3.micro | 6 | 2 zone(region), 3 instance each region |
 
 ### Descriptions
 More detailed descriptions of each asset identified above.
